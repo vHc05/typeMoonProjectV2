@@ -1,0 +1,343 @@
+body {
+  background-color: rgb(213, 236, 255);
+}
+
+p {
+  text-align: justify;
+}
+
+h4 {
+  color: #f7f7f7;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------- */
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer-section {
+background: #151414;
+position: relative;
+}
+.copyright-area{
+background: cornflowerblue;
+padding: 25px 0;
+}
+.copyright-text p {
+margin: 0;
+font-size: 14px;
+color: white;
+}
+.copyright-text p a{
+color: black;
+}
+
+/**--------------------------------------------------------------**/
+#side-menu {
+  position: absolute;
+  left: -20vw;
+  width: 10vw;
+  height: 30vh;
+  background-color: cornflowerblue;
+  z-index: 2500;
+}
+
+#close-icon {
+  position: fixed;
+  margin-top: 1em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+#home {
+  position: fixed;
+  margin-top: 4em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+#how-to {
+  position: fixed;
+  margin-top: 6em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+#season {
+  position: fixed;
+  margin-top: 8em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+#contact {
+  position: fixed;
+  margin-top: 10em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+#games {
+  position: fixed;
+  margin-top: 12em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+.side-menu-open {
+  transition: transform 1s;
+  transform: translateX(20vw);
+}
+
+.side-menu-close {
+  transition: transform 1s;
+  transform: translateX(-20vw);
+}
+
+#header {
+
+  /*El vw significa viewport-widht y el vh viewport-height*/
+  width: 100vw;
+  height: 56px;
+  background-color: cornflowerblue;
+}
+
+#header i {
+  margin-top: 1em;
+  margin-left: 1em;
+  color: aliceblue;
+}
+
+#header h5 {
+  margin-top: -1em;
+  margin-left: 110em;
+}
+
+/**--------------------------------TEMPORADAS-----------------------------**/
+.box {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+
+  width: 100vw;
+
+  background-color: rgb(213, 236, 255);
+  background-image: url(../img/backgroundf.jpg);
+  background-size: cover;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: #fff;
+  margin-top: 10em;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  margin: 5em;
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card:hover:before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .imgBx {
+  bottom: 80px;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .details {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.card .details h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.card .details h2 span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+}
+
+/**--------------------------------------------------------------**/
+
+/**----------------------------MEDIA QUERIES---------------------------------**/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .card {
+  width: 50%;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  .card {
+    width: 50%;
+  }
+
+  .copyright-area {
+    width: 100%;
+  }
+
+  .footer-menu {
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 40%;
+  }
+
+  .copyright-area {
+    width: 100%;
+  }
+
+  .footer-menu {
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 50%;
+  }
+
+  .copyright-area {
+    width: 100%;
+  }
+
+  .footer-menu {
+    width: 100%;
+  }
+
+  .carousel-inner {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 60%;
+  }
+
+}
+
+/**--------------------------------------------------------------**/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.left-side-p {
+  border-style: inset;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 1em;
+  background-color: azure;
+}
+
+#form-cont {
+  padding: 1em;
+}
+
+#button-color {
+  vertical-align: middle;
+  align-content: center;
+  color: #575757;
+  background-color: #f8f9fa;
+  border-width: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  margin-left: 35px;
+  flex: 3%;
+  padding: 10px;
+}
+
+.center-side-p {
+  text-align: justify;
+  border-style: inset;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: azure;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
